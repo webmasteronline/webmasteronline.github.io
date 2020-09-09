@@ -1,0 +1,87 @@
+// USER VARIABLES SECTION
+
+$fontsize: 30px // Body Font Size
+$textcolor: #2A2C33 // Text Color
+$logo-color: #9E9D9D
+$white-text: #ffffff
+$error-color: #FF3737
+$border-col-but-p: #ffffff
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$futura-bold: Futura PT Bold // Roboto Font Family
+$futura-book: Futura PT Book // Roboto Font Family
+$futura-cond-book: Futura PT Cond Book // Roboto Font Family
+$futura-heavy: Futura PT Heavy // Roboto Font Family
+$futura-medium: Futura PT Medium // Roboto Font Family
+$icomoon: icomoon //fonts icomoon icon
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Futura PT Bold', normal, 400, '../fonts/FuturaPT-Bold.woff2')
+@include font('Futura PT Book', normal, 400, '../fonts/FuturaPT-Book.woff2')
+@include font('Futura PT Cond Book', normal, 400, '../fonts/FuturaPTCond-Book.woff2')
+@include font('Futura PT Heavy', normal, 400, '../fonts/FuturaPT-Heavy.woff2')
+@include font('Futura PT Medium', normal, 400, '../fonts/FuturaPT-Medium.woff2')
+@include font('icomoon', normal, 400, '../fonts/icomoon/fonts/icomoon.woff')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: $textcolor
+	
+::-webkit-scrollbar
+	display: none
+
+a
+	&:hover
+		text-decoration: none
+		color: $white-text
+
+.grey-color
+	a
+		&:hover
+			color: $textcolor
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: $fontsize
+	font-family: $futura-book
+	font-style: normal
+	font-variant-ligatures: normal
+	font-variant-caps: normal
+	font-variant-numeric: normal
+	font-variant-east-asian: normal
+	font-weight: 400
+	font-stretch: normal
+	text-indent: 0px
+  text-shadow: none	 
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	color: $textcolor
+	height: 100vh
+	

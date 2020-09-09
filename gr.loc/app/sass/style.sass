@@ -1,0 +1,777 @@
+@import "config"
+
+html,body,.main-container,.container
+	scroll-behavior: smooth
+
+.wrapper
+	width: 100vw
+	height: 100vh
+
+.w-container
+	width: 600vw
+	display: flex
+	flex-direction: row
+	.page
+		width: 100vw
+		height: 100vh
+		display: flex
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus 
+	border: 2px solid #2A2C33
+	-webkit-text-fill-color: $textcolor
+	-webkit-box-shadow: 0 0 0px 1000px #DBDEE1 inset
+	transition: background-color 5000s ease-in-out 0s
+
+.form-control
+	font-family: $futura-book
+	font-size: 20px
+	line-height: 97%
+	width: 413px
+	height: 55px
+	background: transparent
+	border: 1px solid #2A2C33
+	color: $textcolor
+	border-radius: 0
+	padding: 15px 30px
+	display: block
+	&::placeholder
+		color: $textcolor
+	&:active, &:focus
+		border: 2px solid #2A2C33
+		filter: drop-shadow(2px 2px 18px #BFBFBF)
+		box-shadow: none
+		background: transparent
+
+.error
+	border: 1px solid $error-color
+	box-shadow: none
+	color: $error-color
+	&::placeholder
+		color: $error-color
+.label-error
+	color: $error-color
+	position: absolute
+
+
+.button
+	display: inline-block
+	font-family: $futura-bold
+	font-size: 22px
+	margin-top: 50px
+	padding: 20px
+	background-color: transparent
+	letter-spacing: 2px
+	text-transform: uppercase
+	border: 3px solid $border-col-but-p
+	cursor: pointer
+	text-align: center
+	min-width: 271px
+	width: 271px
+
+.submit
+	font-family: $futura-bold
+	font-size: 22px
+	margin-top: 15px
+	padding: 20px 
+	background-color: transparent
+	text-transform: uppercase
+	border: 3px solid $textcolor
+	min-width: 271px
+	width: 271px
+	&:focus
+		outline: none
+		border: 3px solid $white-text
+
+	// &:main_hover 
+	// 	border-top-color: @swatch_0e1b6579
+	// 	border-right-color: @swatch_0e1b6579
+	// 	border-bottom-color: @swatch_0e1b6579
+	// 	border-left-color: @swatch_0e1b6579
+	// 	background-color: @swatch_0e1b6579
+
+.wite-color
+	color: $white-text
+	width: 100%
+	background: linear-gradient(117.3deg, #034D76 7.71%, rgba(143, 167, 190, 0) 150.39%)
+	a 
+		color: #fff
+	.footer-nav
+		.navbar
+			.navbar-nav
+				.active
+					color: $white-text
+					border-top: 1px solid $white-text
+				.nav-item
+					border-right: 1px solid $white-text
+					&:hover
+						border-top: 1px solid $white-text						
+				.nav-link
+					color: $white-text
+	.login
+		li
+			border-right: 1px solid $white-text
+		.log
+			border-bottom: 1px solid transparent
+			border-left: 1px solid transparent
+			a		
+			&:hover
+				border-bottom: 1px solid $white-text
+				border-left: 1px solid $white-text		
+		.sign
+			border-bottom: 1px solid transparent
+			a
+			&:hover
+				border-bottom: 1px solid $white-text
+
+.grey-color
+	background: conic-gradient(from 146.32deg at 50% 72.82%, #C5CED5 0deg, #E8E8E8 275.62deg, #C5CED5 360deg)
+	min-height: 900px	
+	.button 
+		border: 3px solid $textcolor
+	color: $textcolor
+	a 
+		color: $textcolor
+	.footer-nav
+		.navbar
+			.navbar-nav
+				.active
+					color: $textcolor
+					border-top: 1px solid $textcolor
+				.nav-item
+					border-right: 1px solid $textcolor
+					&:hover
+						border-top: 1px solid $textcolor						
+					.nav-link
+						color: $textcolor
+.rectangle-w
+	position: absolute
+	bottom: 0
+	right: 0
+.top-bar
+	position: absolute
+	left: 0px
+	top: 0px
+	right: 0px
+	z-index: 100
+.wraperpage
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+.main-page, .page-bg
+	max-width: 1920px
+	width: 100%
+	height: 100vh
+	position: relative
+	margin: 0 auto
+	min-height: 900px
+	.main
+		height: 80vh
+	.rectangle-box
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		padding-right: 19px		
+		ul
+			display: flex
+			list-style: none
+			margin-top: 60px
+			margin-bottom: 0
+			padding-left: 0
+			li
+				padding: 0px 10px
+				a
+					&::before
+						content: '\25FD'
+						font-size: 30px
+						color: #fff
+					&:hover
+						&::before
+							content: '\25FE'
+							color: #fff
+				.active
+					&::before
+						content: '\25FE'
+						padding-right: 5px
+
+	.title
+		font-family: $futura-medium
+		font-weight: 400
+		font-size: 100px
+		font-style: normal
+		width: 650px
+		color: #FFFFFF
+		line-height: 97.18%
+	.main-left
+		display: flex
+		justify-content: center
+		align-items: center
+	.main-right
+		display: flex
+		justify-content: center
+		align-items: center
+	.main-box
+		//width: 630px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+	.text
+		max-width: 501px
+		font-size: 35px
+		line-height: 111%
+		margin-top: 15px
+
+.main-page
+	.button
+		margin-left: 68px
+		margin-top: 33px
+		letter-spacing: 0.5px
+.top-nav
+	display: flex
+	justify-content: space-between
+	align-items: center
+.brand
+	font-size: 24px
+	line-height: 31px
+	width: 468px
+	text-align: right
+	padding-top: 38px
+.logo-box
+	text-align: center
+	margin-top: 17px
+
+.login-box, .login
+	height: 100%
+
+.login
+	display: flex
+	align-items: center
+	margin-bottom: 0
+	list-style: none
+	li
+		border-right: 1px solid #2a2c33
+		&:last-child
+			border-right: none
+		a
+			width: 100%
+			height: 90px
+			display: block
+			display: flex
+			align-items: center
+	.log
+		width: 120px
+		border-bottom: 1px solid transparent
+		border-left: 1px solid transparent		
+		a
+			padding-left: 35px
+			padding-top: 10px
+		&:hover
+			border-bottom: 1px solid #2a2c33
+			border-left: 1px solid #2a2c33
+	.log-active
+		border-bottom: 1px solid #2a2c33
+		border-left: 1px solid #2a2c33			
+	.sign
+		width: 238px
+		text-align: left
+		border-bottom: 1px solid transparent
+		a
+			padding-left: 26px
+			padding-top: 11px
+		&:hover
+			border-bottom: 1px solid #2a2c33
+	.sign-active
+		border-bottom: 1px solid #2a2c33
+	a 
+		font-size: 24px
+		&:hover
+			text-decoration: none
+
+.logo
+	position: relative
+	width: 255px
+	.g
+		width: 26px
+		top: -8px
+	.r
+		width: 24px
+		top: 9px
+		left: 10px
+	.g,.r
+		color: $logo-color
+		text-transform: uppercase
+		position: absolute
+.soc-icon
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-end
+	z-index: 10
+.social-icons
+	// position: fixed
+	// left: 0
+	// top: 50%
+	// transform: translateY(-50%)
+	// z-index: 1
+	ul
+		display: block
+		padding: 0
+		margin: 0
+		li
+			display: block
+			width: 100%
+			margin-top: 62px
+			&:first-child
+				margin-top: 0
+			&:last-child
+				a
+					background: rgba(255,255,255,0.3)				
+			a
+				padding: 5px 25px 0px 30px
+				height: 50px
+				transition: 0.5s
+				&:hover
+					background: rgba(255,255,255,0.3)
+				.icon-facebook
+					&::before
+						content: '\e903'
+						font-family: $icomoon
+						font-size: 30px
+						opacity: 0.35															
+				.icon-tweeter
+					&::before
+						content: '\e909'
+						font-family: $icomoon
+						opacity: 0.4
+						font-size: 22px
+						padding-left: 3px
+				.icon-letter
+					&::before
+						content: '\e906'
+						font-family: $icomoon
+						font-size: 23px
+						opacity: 0.4
+						padding-left: 3px
+				.icon-youtube
+					&::before
+						content: '\e90a'
+						font-family: $icomoon
+						opacity: 0.4
+						font-size: 24px
+						padding-left: 2px
+
+// .icon-facebook
+// 	background: url("../images/icon/facebook.svg") no-repeat
+// 	width: 18px
+// 	height: 30px
+// 	opacity: 0.35	
+
+.icon-handshake
+	&::before
+		content: '\e90c'
+		font-family: $icomoon
+		font-size: 63px
+.icon-email
+	&::before
+		content: '\e908'
+		font-family: $icomoon
+		font-size: 63px
+.icon-speech-bubble
+	&::before
+		content: '\e900'
+		font-family: $icomoon
+		font-size: 63px
+.icon-videocall
+	&::before
+		content: '\e905'
+		font-family: $icomoon
+		font-size: 63px
+.icon-network
+	&::before
+		content: '\e90b'
+		font-family: $icomoon
+		font-size: 63px
+.icon-brain
+	&::before
+		content: '\e901'
+		font-family: $icomoon
+		font-size: 63px
+.icon-call
+	&::before
+		content: '\e910'
+		font-family: $icomoon
+		font-size: 24px
+.internet
+	&::before
+		content: '\e90d'
+		font-family: $icomoon
+		font-size: 24px
+
+
+
+.masseg-box-r
+	background: rgba(255,255,255,0.2)
+	padding: 50px 50px 50px 50px
+	.botton-text
+		display: flex
+		align-items: center
+		a
+			display: flex
+			align-items: center		
+			h2
+				font-size: 40px
+				line-height: 50px
+				font-weight: normal
+			.arrow-right
+				background: url("../images/icon/arrow-right.png") no-repeat
+				width: 54px
+				height: 38px
+				display: flex
+				margin-left: 30px
+	p
+		line-height: 111%
+		font-size: 35px
+		letter-spacing: -0.025em
+		max-width: 540px
+
+.baner-data
+	position: absolute
+	right: 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-end
+.dott-box
+	position: absolute
+	bottom: 19%
+	right: 0
+.right-data
+	background: rgba(255,255,255,0.2)
+	position: relative
+	width: 120px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	//margin-left: 25px
+	.botton-text
+		//position: absolute
+		transform:rotate(-90deg)
+		display: block
+		top: 0
+		left: 0
+		bottom: 0
+		writing-mode: vertical-lr
+		display: flex
+		//padding-left: 30px
+		a
+			display: flex
+			h2
+				transform: rotate(180deg)
+				font-size: 30px
+				font-weight: normal
+				opacity: 0.3
+				line-height: 0
+				margin-bottom: 25px
+			.arrow-right
+				background: url("../images/icon/arrow-up.png") no-repeat
+				width: 38px
+				height: 54px
+				display: flex
+				margin-left: 7px
+				margin-top: 45px
+				margin-bottom: 16px
+				opacity: 0.3
+.footer-nav
+	max-width: 1920px
+	position: absolute //absolute без скрола*
+	width: 100%
+	bottom: 0
+	padding: 0
+	z-index: 100
+	.navbar
+		padding: 0
+		.navbar-nav
+			width: 100%
+			.active
+				color: $white-text
+				border-top: 1px solid $white-text
+				padding-top: 0px
+			.nav-item
+				width: 20%
+				text-align: center		
+				border-right: 1px solid $white-text
+				border-top: 1px solid transparent
+				transition: border-top 0.5s
+				display: flex
+				justify-content: center
+				align-items: center
+				&:last-child 
+					border-right: none
+				&:hover
+					border-top: 1px solid $white-text
+				.home
+					width: 38px										
+				.nav-link
+					width: 100%
+					height: 100%
+					font-size: 20px
+					text-transform: uppercase
+					color: $white-text
+					font-family: $futura-book
+					line-height: 26px
+					padding-top: 28px
+					display: block
+					
+
+
+.page-bg
+	h2
+		font-family: $futura-medium
+		font-size: 60px
+		line-height: 97.18%
+		margin-bottom: 55px
+	h3 
+		font-family: $futura-medium
+		font-size: 40px
+		line-height: 97.18%
+		margin-bottom: 65px
+	p 
+		font-size: 35px
+		line-height: 45px		
+	.main
+		display: flex
+		justify-content: center
+		align-items: center
+		.conference
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 100%
+			p
+				margin-bottom: 40px
+			.button
+				margin-left: 0
+		 .conference
+			p
+				font-size: 30px
+				line-height: 103%
+			.button
+				margin-top: 0
+				min-width: 270px
+				text-align: center
+		.conference
+			.content
+				max-width: 1910px		
+			.margin-bott
+				margin-bottom: 30px
+				text-align: center
+				width: 100%
+			.box-gives
+				margin-top: 25px
+				margin-bottom: 20px
+				padding-right: 105px
+				padding-left: 135px
+			h2
+				margin-bottom: 13px
+			.desc
+				width: 510px
+				font-size: 26px
+				line-height: 33px
+				letter-spacing: -0.025em
+				opacity: 0.7
+				text-align: center
+				margin-bottom: 15px
+			.data-title
+				font-size: 35px
+				line-height: 97.18%
+				margin-bottom: 15px	
+			.video
+				text-align: left
+				margin-top: 25px		
+
+.about
+	display: flex
+	justify-content: center
+	text-align: center
+#about
+	.margin-bott
+		text-align: center
+
+#our-advantages
+	h2
+		margin-bottom: 60px
+	.baner-data
+		.botton-text
+			a
+				h2
+					margin-bottom: 25px
+.our-advant
+	display: flex
+	justify-content: center
+	.content
+		max-width: 1910px
+	.margin-bott
+		margin-bottom: 30px
+		text-align: center
+		width: 100%
+		a
+			.button
+				margin-top: 35px
+	h2
+		margin-bottom: 0
+	.box-gives
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 27px
+		p
+			font-size: 30px
+			width: 460px
+			line-height: 103%
+	.box-gives-l
+		.box-gives
+			padding-right: 0
+		.box-g-icon
+			margin-left: 0
+			margin-right: 35px
+	.box-gives-r
+		.box-gives
+			padding-right: 0
+		.box-g-icon
+			margin-left: 0px
+			margin-right: 35px
+
+#contact
+	.reg-content
+		margin-bottom: 103px
+.title-us
+	text-align: center
+	margin-bottom: 0
+	h2
+		margin-bottom: 16px
+		p
+			margin-bottom: 0
+.contact-us
+	width: 1204px
+	display: flex
+	justify-content: space-between
+	.box-gives
+		margin-top: 98px
+	.box-gives-r
+		margin-top: 49px
+		padding-right: 61px
+	.form-control
+		margin-left: 0px
+	h2
+		margin-bottom: 10px	
+	.box-gives
+		margin-top: 99px
+		padding-left: 28px
+		.mail-box
+			margin: 40px 0px
+		.phon-box
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			p
+				margin-bottom: 0px
+				padding-top: 15px
+				&:first-child
+					padding-top: 0
+			.icon-call
+				margin-right: 24px
+				margin-left: 0px
+		.internet-box
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			.internet
+				margin-right: 24px
+				margin-left: 0px
+			p
+			 margin-bottom: 7px
+	.arrow-mail
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		position: relative
+		padding-left: 48px
+		font-size: 35px
+		img
+			position: absolute
+			top: 32px
+			left: -300px
+			//height: 5px
+	.margin-bott
+		margin-bottom: 0px
+		width: 100%
+		text-align: inherit
+		padding-left: 85px
+
+
+#registration
+	h2
+		margin-bottom: 25px
+		text-align: center
+	.reg-box
+		display: flex
+		justify-content: center
+	.margin-bott
+		width: 100%
+		text-align: center
+		.submit
+			margin-top: 0
+	.form-box
+		display: flex
+		margin-bottom: 22px
+		.form-group
+			margin-bottom: 0
+			&:last-child 
+				margin-left: 25px
+			select
+				padding-left: 25px
+				padding-top: 10px
+				padding-bottom: 10px
+				option
+					background: #DBDEE1
+					border: 1px solid #2A2C33
+					box-shadow: 0px 4px 14px #B1B1B1
+			.pass-title
+				font-size: 18px
+				opacity: 0.6
+				line-height: 25px
+				padding-bottom: 0
+	.reg-desc
+		text-align: center
+		p
+			font-size: 18px
+			a
+				text-decoration: underline
+
+
+
+.center
+	text-align:center
+
+
+
+
+
+// CUSTOM USER STYLES & IMPORTS
+
+@import "media" // Always at the end

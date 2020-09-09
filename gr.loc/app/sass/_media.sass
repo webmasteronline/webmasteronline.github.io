@@ -1,0 +1,286 @@
+@import config
+
+
+/*==========  Desktop First  ==========*/
+// ≥1700px
+@media screen and (max-width: 1700px)
+	.main-page
+		.title
+			font-size: 85px
+		.text
+		.masseg-box-r
+			padding-bottom: 25px
+			p	
+			.botton-text
+				h2
+					font-size: 35px
+
+	.our-advant
+		h2
+		.box-gives
+			margin-bottom: 0px
+			margin-top: 35px
+			p
+				font-size: 30px
+				line-height: 103%
+		.box-gives-l
+			.box-gives
+				padding-right: 0
+			.box-g-icon
+				margin-left: 0
+				margin-right: 35px
+		.box-gives-r
+			.box-gives
+				padding-right: 0
+			.box-g-icon
+				margin-left: 15px
+				margin-right: 35px
+		.margin-bott
+			margin-bottom: 55px
+
+	.page-bg
+		.main
+			.conference 
+				.box-gives
+					padding-right: 35px
+					padding-left: 100px
+				h2 
+					font-size: 55px
+					margin-bottom: 0
+				.right-data
+					height: 380px
+					.botton-text 
+						a
+							.arrow-right
+								margin-top: 20px
+							h2
+								font-size: 30px
+
+// ≥1440px font-size-down
+@media screen and (max-width: 1440px)
+
+	.main-page
+		.main-box
+			display: block
+		.title
+			width: 500px
+			font-size: 65px
+		.text
+			max-width: 470px
+			font-size: 25px		
+		.masseg-box-r
+			padding: 30px
+			p
+				font-size: 22px
+				padding-right: 50px				
+			.botton-text
+				h2
+					font-size: 25px
+				svg
+					width: 35px			
+		.main-box
+			h1
+				padding-bottom: 0px
+			p
+				padding-bottom: 30px				
+	.button
+		padding: 20px 25px
+	.our-advant, .page-bg
+		h2
+			font-size: 55px
+		h3
+			font-size: 35px
+	.our-advant
+		p
+			font-size: 25px
+		.box-gives
+			p
+				font-size: 25px
+	.page-bg
+		.main
+			.about
+				p
+					font-size: 25px
+	.page-bg
+		.main
+			.conference 
+				h2 
+					font-size: 55px
+					margin-bottom: 0
+				.right-data
+					height: 380px
+					.botton-text 
+						a
+							.arrow-right
+								margin-top: 20px
+							h2
+								font-size: 30px
+				p
+					font-size: 25px
+				.box-gives
+					padding-left: 35px
+					padding-right: 35px
+					margin-top: 20px
+				.desc
+					margin-bottom: 0
+				.data-title
+					margin-bottom: 0
+				.video
+					margin-top: 20px
+
+	
+
+
+// ≥1200px
++media-breakpoint-down(lg)
+	// .login
+	// 	margin-right: 50px
+	.main-page
+		.main-box
+			display: block
+		.title
+			width: 500px
+			font-size: 60px
+		.text
+			max-width: 470px
+			font-size: 25px
+		.main-box
+			h1
+				padding-bottom: 0px
+			p
+				padding-bottom: 30px
+		.masseg-box-r
+			padding: 35px
+			p
+				font-size: 25px
+				padding-right: 0px		
+			.botton-text
+				h2
+					font-size: 22px
+				svg
+					width: 35px
+	.footer-nav
+		.navbar
+			.navbar-nav
+				.nav-item
+					padding-bottom: 0
+	.page-bg
+		.main					
+			.conference
+				p
+					font-size: 22px
+					line-height: 103%
+				.box-gives
+					width: 580px
+				h2 
+					font-size: 48px
+				.desc
+					line-height: 1em
+					margin-bottom: 10px
+				.data-title
+					font-size: 30px
+					margin-bottom: 9px
+	.button
+		padding: 20px 25px
+
+// ≥992px
++media-breakpoint-down(md)
+	.main-page
+		.main-box
+			display: block
+		.title
+			width: 355px
+			font-size: 55px
+		.text
+			max-width: 350px
+			font-size: 23px
+		.main-box
+			h1
+				padding-bottom: 35px
+			p
+				padding-bottom: 75px
+		.masseg-box-r
+			padding: 25px
+			p
+				font-size: 22px
+				padding-right: 0px		
+			.botton-text
+				h2
+					font-size: 18px
+				svg
+					width: 25px
+
+	.login
+		display: none
+		margin-right: 0px
+	.footer-nav
+		position: absolute
+		top: 0
+		.navbar
+			position: relative
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			justify-content: flex-end
+			.navbar-nav
+				.active
+					border-top: 1px solid $textcolor
+				.nav-item
+					width: 100%
+					border: 1px solid $textcolor
+		.navbar-bg
+			color: #000
+			background-color: rgba(255,255,255,.8)
+	.navbar-light
+		.navbar-toggler
+			border-color: rgba(0,0,0,.0)
+	button
+		&:focus
+			outline: none
+
+	.wite-color
+		.footer-nav
+			.navbar
+				.navbar-nav
+					.active
+						color: $textcolor
+						border-top: 1px solid $textcolor
+					.nav-item
+						border-right: 1px solid $textcolor
+						&:hover
+							border-top: none						
+					.nav-link
+						color: $textcolor
+
+	
+	.social-icons
+		ul
+			li
+				a
+					padding: 10px 15px 0 10px
+
++media-breakpoint-between(lg, xl)
+
+
+// ≥768px
++media-breakpoint-down(sm)
+	.page-1
+		.login-box, .login
+			display: none
+
+// ≥576px
++media-breakpoint-down(xs)
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+
+// ≤1200px
++media-breakpoint-up(xl)
